@@ -2,8 +2,10 @@ import logo from './logo.svg';
 import './App.scss';
 import cardData from './cardData';
 import randrCardData from './randrCardData';
+import categorizeCardData from './categorizeCardData';
 import PTasksFlashCardContainer from './FlashCardContainer';
 import RandRFlashCardContainer from './RandRFlashCardContainer';
+import CategorizeFlashCardContainer from './CategorizeFlashCardContainer';
 import 'bootstrap/scss/bootstrap.scss'
 import 'font-awesome/scss/font-awesome.scss';
 import {
@@ -14,23 +16,24 @@ import {
 } from "react-router-dom";
 
 
+
 function App() {
   return (
     <Router>
       <div className="App">
         <header className="App-header">
           CAP Flash Cards
-          <div>
+          <div className="navContainer">
             <nav>
               <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
                 <li>
                   <Link to="/roles">Roles and Responsibilities</Link>
                 </li>
                 <li>
                   <Link to="/PTasks">P-Tasks</Link>
+                </li>
+                <li>
+                  <Link to="/categorize">Categorize</Link>
                 </li>
               </ul>
             </nav>
@@ -48,8 +51,8 @@ function App() {
             <Route path="/PTasks">
               <PTasks />
             </Route>
-            <Route path="/">
-
+            <Route path="/categorize">
+              <Categorize />
             </Route>
           </Switch>
 
@@ -72,6 +75,12 @@ function PTasks() {
 function Roles(){
   return(
     <RandRFlashCardContainer cards={randrCardData}/>
+  );
+}
+
+function Categorize(){
+  return(
+    <CategorizeFlashCardContainer cards={categorizeCardData}/>
   );
 }
 

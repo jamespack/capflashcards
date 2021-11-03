@@ -66,6 +66,18 @@ const randrCardData = [
     {
         "Front": "SYSTEM OWNER",
         "Back":"Organizational official responsible for the procurement, development, integration, modification, operation, maintenance, and disposal of a system."
+    },
+    {
+        "Front":"SYSTEM SECURITY OR PRIVACY OFFICER",
+        "Back":"Inidividual responsible for ensuring that the security and privacy posture of the system is maintained. The princiapl advisor on all matters involving the controls for the system."
+    },
+    {
+        "Front":"SYSTEM USER",
+        "Back":"Individual or (system) process acting on behalf of an individual that is authorized to access information and information systems to perform assigned duties."
+    },
+    {
+        "Front":"SYSTEMS SECURITYOR PRIVACY ENGINEER",
+        "Back":"Individual, group, or organization responsible for conducting systems security or privacy engineering activities as part of the SDLC."
     }
     
     

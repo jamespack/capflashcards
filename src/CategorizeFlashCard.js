@@ -1,6 +1,6 @@
 import React from 'react';
 
-class RandRFlashCard extends React.Component {
+class CategorizeFlashCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,15 +20,27 @@ class RandRFlashCard extends React.Component {
                 className={`card ${cardClass}`}
                 onClick={() => this.setState({ showAnswer: !this.state.showAnswer })}
             >
-            <span className='card__counter'>{this.props.cardNumber+1}</span>
+            <span className='card__counter'>{this.props.front.taskNumber}</span>
                 {
                     this.state.showAnswer ? (
-                        <div className={'card_content_back randrcard'}>
-                            <p>{this.props.back}</p>
+                        <div className={'card_content_back'}>
+                            <div className={'taskDescription'}>
+                                <h3>Task Description</h3>
+                                <span>{this.props.back.taskDescription}</span>
+                            </div>
+                            <div className={'primaryResponsibility'}>
+                                <h3>Primary Responsibility</h3>
+                                <span>{this.props.back.primaryResponsibility.join(', ')}</span>
+                            </div>
+                            <div className={'sdlcMapping'}>
+                                <h3>SDLC Mapping</h3>
+                                <span>New: {this.props.back.sdlcAlignment.New}</span>
+                                <span>Existing: {this.props.back.sdlcAlignment.Existing}</span>
+                            </div>
                         </div>
                     ) : (
                         <div className={'card_content_front'}>
-                            {this.props.front}
+                            {this.props.front.taskName}
                         </div>)
                 }
 
@@ -60,4 +72,4 @@ class RandRFlashCard extends React.Component {
 
 }
 
-export default RandRFlashCard
+export default CategorizeFlashCard
