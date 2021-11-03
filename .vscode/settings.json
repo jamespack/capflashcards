@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b0e5a5e5-66a4-408d-874c-d44cbf5dd396/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/capflashcards",
+    "appService.deploySubpath": "."
+}

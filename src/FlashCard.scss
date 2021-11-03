@@ -1,0 +1,223 @@
+
+
+
+$background: #F1F1F1;
+$header-color: #666666;
+
+html, body {
+  background: $background;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+}
+
+// @keyframes flipBack {
+//   0% {
+//     transform: rotateY(180deg);
+//   }
+//   100% {
+//     transform: rotateY(0deg);
+//   }
+// }
+
+// * {
+//   position: relative;
+// }
+.card_content_front{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.7em;
+  font-weight: bold;
+  justify-content: center;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+.content-wrapper {
+  display: flex;
+  height: 93vh;
+  justify-content: center;
+  align-items: center;
+  background: $background;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.card  {
+  width: 52em;
+  height: 28em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: white;
+  box-shadow: 2px 3px 23px rgba(0,0,0,.1);
+  padding: 1em 3em;
+	transform-style: preserve-3d;
+  margin-top: 4em;
+  transition: 0.2s;
+  
+  &.back {
+  
+  }
+  
+  @media(max-width: 600px) {
+    width: 25em;
+  }
+  
+  @media(max-height: 823px) {
+    margin-top: 9em;
+  }
+}
+
+.card__flip-card {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  cursor: pointer;
+  color: #333;
+}
+
+.card__counter {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+}
+
+.card__content--front {
+  animation: fadeInUp 0.5s;
+  font-weight: bold;
+}
+
+.card__content--back {
+  animation: fadeIn 0.6s;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.header {
+  background: white;
+  box-shadow: 7px 7px 22px lightgray;
+  padding: 1em 0em;
+  display: flex;
+  align-items: center;
+  height: 3vh;
+  color: $header-color;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-content {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  
+  span {
+    font-size: 1.3em;
+    cursor: pointer
+  }
+}
+
+.header-content__right {
+  justify-content: flex-end;
+   z-index: 11;
+}
+
+.header-content__left {
+  justify-content: flex-start;
+  
+  span {
+    margin-left: 1em;
+  }
+}
+
+
+
+.card__actions {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-self: flex-end;
+  opacity: 0;
+  transition: 0.3s;
+  left: 0;
+  
+  &.active {
+    opacity: 1;
+  }
+}
+
+.card__next-button {
+  margin-left: 0.5em;
+  cursor: pointer;
+  padding: 0.5em 0.75em;
+  background: $background;
+  color: #444;
+  transition: 0.2s;
+  
+  &:hover {
+    background: darken($background, 10%);
+  }
+}
+
+.card__prev-button {
+  margin-right: 0.5em;
+  cursor: pointer;
+  padding: 0.5em 0.75em;
+  background: $background;
+  color: #444;
+  transition: 0.2s;
+  
+  &:hover {
+    background: darken($background, 10%);
+  }
+}
+
+.card-container__dot {
+  margin: 0 1em;
+}
+
+.card-container__dots-wrapper {
+  padding: 1em 0em;
+  margin-top: 1em;
+  text-align: center;
+  
+}
+
+.card-container__dot {
+  color: lightgray;
+  cursor: pointer;
+  
+  &.active {
+    color: dodgerblue;
+    transition: 0.5s;
+  }
+}
+
+.sdlcMapping{
+  margin-bottom: 5px;
+
+  span{
+    margin: 10px;
+  }
+}
+
+.taskDescription{
+  margin-bottom: 5px;
+}
+
+.primaryResponsibility{
+  margin-bottom: 5px;
+}
+.expectedOutput{
+  margin-bottom: 5px;
+}
+
+.card_actions_front{
+  position:absolute;
+  bottom: 10px;
+}
