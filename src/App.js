@@ -3,9 +3,11 @@ import './App.scss';
 import cardData from './cardData';
 import randrCardData from './randrCardData';
 import categorizeCardData from './categorizeCardData';
+import selectCardData from './selectFlashCardData';
 import PTasksFlashCardContainer from './FlashCardContainer';
 import RandRFlashCardContainer from './RandRFlashCardContainer';
 import CategorizeFlashCardContainer from './CategorizeFlashCardContainer';
+import SelectFlashCardContainer from './SelectFlashCardContainer';
 import 'bootstrap/scss/bootstrap.scss'
 import 'font-awesome/scss/font-awesome.scss';
 import {
@@ -35,6 +37,9 @@ function App() {
                 <li>
                   <Link to="/categorize">Categorize</Link>
                 </li>
+                <li>
+                  <Link to="/select">Select</Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -53,6 +58,9 @@ function App() {
             </Route>
             <Route path="/categorize">
               <Categorize />
+            </Route>
+            <Route path="/select">
+              <Select/>
             </Route>
           </Switch>
 
@@ -82,6 +90,13 @@ function Categorize(){
   return(
     <CategorizeFlashCardContainer cards={categorizeCardData}/>
   );
+}
+
+
+function Select(){
+  return(
+    <SelectFlashCardContainer cards={selectCardData}/>
+  )
 }
 
 export default App;
