@@ -4,7 +4,15 @@ import cardData from './cardData';
 import randrCardData from './randrCardData';
 import categorizeCardData from './categorizeCardData';
 import selectCardData from './selectFlashCardData';
+import assessCardData from './assessCardData';
+import authorizeCardData from './authorizeCardData';
+import implementCardData from './implementCardData';
+import monitorCardData from './monitorCardData';
+import MonitorFlashCardContainer from './monitorFlashCardContainer';
+import AuthorizeFlashCardContainer from './authorizeFlashCardContainer';
 import PTasksFlashCardContainer from './FlashCardContainer';
+import ImplementFlashCardContainer from './implementFlashCardContainer';
+import AssessFlashCardContainer from './assessFlashCardContainer';
 import RandRFlashCardContainer from './RandRFlashCardContainer';
 import CategorizeFlashCardContainer from './CategorizeFlashCardContainer';
 import SelectFlashCardContainer from './SelectFlashCardContainer';
@@ -40,6 +48,18 @@ function App() {
                 <li>
                   <Link to="/select">Select</Link>
                 </li>
+                <li>
+                  <Link to="/implement">Implement</Link>
+                </li>
+                <li>
+                  <Link to="/assess">Assess</Link>
+                </li>
+                <li>
+                  <Link to="/authorize">Authorize</Link>
+                </li>
+                <li>
+                  <Link to="/monitor">Monitor</Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -61,6 +81,18 @@ function App() {
             </Route>
             <Route path="/select">
               <Select/>
+            </Route>
+            <Route path="/implement">
+              <Implement/>
+            </Route>
+            <Route path="/assess">
+              <Assess />
+            </Route>
+            <Route path="/authorize">
+              <Authorize/>
+            </Route>
+            <Route path="/monitor">
+              <Monitor />
             </Route>
           </Switch>
 
@@ -99,4 +131,27 @@ function Select(){
   )
 }
 
+function Implement(){
+  return(
+    <ImplementFlashCardContainer cards={implementCardData}/>
+  )
+}
+
+function Assess(){
+  return(
+    <AssessFlashCardContainer cards={assessCardData}/>
+  )
+}
+
+function Authorize(){
+  return(
+    <AuthorizeFlashCardContainer cards={authorizeCardData}/>
+  )
+}
+
+function Monitor(){
+  return(
+    <MonitorFlashCardContainer cards={monitorCardData}/>
+  )
+}
 export default App;

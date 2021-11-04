@@ -34,8 +34,8 @@ class CategorizeFlashCard extends React.Component {
                             </div>
                             <div className={'sdlcMapping'}>
                                 <h3>SDLC Mapping</h3>
-                                <span>New: {this.props.back.sdlcAlignment.New}</span>
-                                <span>Existing: {this.props.back.sdlcAlignment.Existing}</span>
+                                <span><b>New:</b> {this.props.back.sdlcAlignment.New}</span>
+                                <span><b>Existing: </b>{this.props.back.sdlcAlignment.Existing}</span>
                             </div>
                         </div>
                     ) : (
