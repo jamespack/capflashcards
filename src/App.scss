@@ -1,20 +1,19 @@
 @import '~bootstrap/scss/bootstrap';
 
-#root{
-  height: 100vh;
+body{
+ 
+  min-height: -webkit-fill-available;
+
 }
 
-.navLink{
+
+#basic-nav-dropdown{
   color:white;
-
-  &:hover{
-    color: white;
-  }
-
 }
+
 
 .fullHeightContainer{
-  height: 100vh;
+  // height: 100vh;
   align-items: center;
 }
 

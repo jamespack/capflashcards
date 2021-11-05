@@ -24,7 +24,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Container, Nav, Navbar, Row, Col, NavLink } from 'react-bootstrap';
+import { Container, Nav, Navbar, Row, Col, NavLink, NavDropdown } from 'react-bootstrap';
 
 
 
@@ -35,19 +35,21 @@ function App() {
 
 
         <Navbar bg="dark" variant="dark" collapseOnSelect="true" expand="lg">
-          
+
           <Container>
-          <Navbar.Brand>CAP Flash Cards</Navbar.Brand>
+            <Navbar.Brand>CAP Flash Cards</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <NavLink className={'navLink'} href="/roles">Roles and Responsibilities </NavLink>
-              <NavLink className={'navLink'} href="/PTasks">P-Tasks</NavLink>
-              <NavLink className={'navLink'} href="/categorize">Categorize</NavLink>
-              <NavLink className={'navLink'} href="/select">Select</NavLink>
-              <NavLink className={'navLink'} href="/implement">Implement</NavLink>
-              <NavLink className={'navLink'} href="/assess">Assess</NavLink>
-              <NavLink className={'navLink'} href="/authorize">Authorize</NavLink>
-              <NavLink className={'navLink'} href="/monitor">Monitor</NavLink>
+              <NavDropdown title="RMF Tasks" id="basic-nav-dropdown">
+                <NavDropdown.Item className={'navLink'} href="/roles">Roles and Responsibilities </NavDropdown.Item>
+                <NavDropdown.Item className={'navLink'} href="/PTasks">Prepare Tasks</NavDropdown.Item>
+                <NavDropdown.Item className={'navLink'} href="/categorize">Categorize</NavDropdown.Item>
+                <NavDropdown.Item className={'navLink'} href="/select">Select</NavDropdown.Item>
+                <NavDropdown.Item className={'navLink'} href="/implement">Implement</NavDropdown.Item>
+                <NavDropdown.Item className={'navLink'} href="/assess">Assess</NavDropdown.Item>
+                <NavDropdown.Item className={'navLink'} href="/authorize">Authorize</NavDropdown.Item>
+                <NavDropdown.Item className={'navLink'} href="/monitor">Monitor</NavDropdown.Item>
+              </NavDropdown>
             </Navbar.Collapse>
           </Container>
         </Navbar>
@@ -55,32 +57,32 @@ function App() {
         <Container className={"d-flex justify-content-center fullHeightContainer"}>
           <Row >
             <Col>
-            <Switch>
-              <Route path="/roles">
-                <Roles />
-              </Route>
-              <Route path="/PTasks">
-                <PTasks />
-              </Route>
-              <Route path="/categorize">
-                <Categorize />
-              </Route>
-              <Route path="/select">
-                <Select />
-              </Route>
-              <Route path="/implement">
-                <Implement />
-              </Route>
-              <Route path="/assess">
-                <Assess />
-              </Route>
-              <Route path="/authorize">
-                <Authorize />
-              </Route>
-              <Route path="/monitor">
-                <Monitor />
-              </Route>
-            </Switch>
+              <Switch>
+                <Route path="/roles">
+                  <Roles />
+                </Route>
+                <Route path="/PTasks">
+                  <PTasks />
+                </Route>
+                <Route path="/categorize">
+                  <Categorize />
+                </Route>
+                <Route path="/select">
+                  <Select />
+                </Route>
+                <Route path="/implement">
+                  <Implement />
+                </Route>
+                <Route path="/assess">
+                  <Assess />
+                </Route>
+                <Route path="/authorize">
+                  <Authorize />
+                </Route>
+                <Route path="/monitor">
+                  <Monitor />
+                </Route>
+              </Switch>
             </Col>
           </Row>
 

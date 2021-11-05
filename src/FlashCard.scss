@@ -7,6 +7,7 @@ $header-color: #666666;
 html, body {
   background: $background;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
 }
 
 * {
