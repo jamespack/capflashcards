@@ -24,7 +24,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Container, Nav, Navbar, Row, Col } from 'react-bootstrap';
+import { Container, Nav, Navbar, Row, Col, NavLink } from 'react-bootstrap';
 
 
 
@@ -35,23 +35,24 @@ function App() {
 
 
         <Navbar bg="dark" variant="dark" collapseOnSelect="true" expand="lg">
-          <Navbar.Brand>CAP Flash Cards</Navbar.Brand>
+          
           <Container>
+          <Navbar.Brand>CAP Flash Cards</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav.Link href="/roles">Roles and Responsibilities </Nav.Link>
-              <Nav.Link href="/PTasks">P-Tasks</Nav.Link>
-              <Nav.Link href="/categorize">Categorize</Nav.Link>
-              <Nav.Link href="/select">Select</Nav.Link>
-              <Nav.Link href="/implement">Implement</Nav.Link>
-              <Nav.Link href="/assess">Assess</Nav.Link>
-              <Nav.Link href="/authorize">Authorize</Nav.Link>
-              <Nav.Link href="/monitor">Monitor</Nav.Link>
+              <NavLink className={'navLink'} href="/roles">Roles and Responsibilities </NavLink>
+              <NavLink className={'navLink'} href="/PTasks">P-Tasks</NavLink>
+              <NavLink className={'navLink'} href="/categorize">Categorize</NavLink>
+              <NavLink className={'navLink'} href="/select">Select</NavLink>
+              <NavLink className={'navLink'} href="/implement">Implement</NavLink>
+              <NavLink className={'navLink'} href="/assess">Assess</NavLink>
+              <NavLink className={'navLink'} href="/authorize">Authorize</NavLink>
+              <NavLink className={'navLink'} href="/monitor">Monitor</NavLink>
             </Navbar.Collapse>
           </Container>
         </Navbar>
 
-        <Container className={"d-flex justify-content-center"}>
+        <Container className={"d-flex justify-content-center fullHeightContainer"}>
           <Row >
             <Col>
             <Switch>

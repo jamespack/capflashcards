@@ -1,7 +1,29 @@
 @import '~bootstrap/scss/bootstrap';
 
+#root{
+  height: 100vh;
+}
+
+.navLink{
+  color:white;
+
+  &:hover{
+    color: white;
+  }
+
+}
+
+.fullHeightContainer{
+  height: 100vh;
+  align-items: center;
+}
+
+
 .App {
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
