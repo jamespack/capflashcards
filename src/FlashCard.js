@@ -32,10 +32,6 @@ class PTaskFlashCard extends React.Component {
                                 <h3>Primary Responsibility</h3>
                                 <span>{this.props.back.primaryResponsibility.join(', ')}</span>
                             </div>
-                            <div className={'expectedOutput'}>
-                                <h3>Expected Output</h3>
-                                <span>{this.props.back.expectedOutput}</span>
-                            </div>
                             <div className={'sdlcMapping'}>
                                 <h3>SDLC Mapping</h3>
                                 <span><b>New:</b> {this.props.back.sdlcAlignment.New}</span>

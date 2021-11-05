@@ -16,7 +16,7 @@ import AssessFlashCardContainer from './assessFlashCardContainer';
 import RandRFlashCardContainer from './RandRFlashCardContainer';
 import CategorizeFlashCardContainer from './CategorizeFlashCardContainer';
 import SelectFlashCardContainer from './SelectFlashCardContainer';
-import 'bootstrap/scss/bootstrap.scss'
+
 import 'font-awesome/scss/font-awesome.scss';
 import {
   BrowserRouter as Router,
@@ -24,17 +24,22 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { Container, Navbar } from 'react-bootstrap';
 
 
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <header className="App-header">
-          CAP Flash Cards
-          <div className="navContainer">
-            <nav>
+    <div className="App">
+      <Router>
+
+      
+        <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg">
+        <Navbar.Brand>CAP Flash Cards</Navbar.Brand>
+          <Container>
+            
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+               <Navbar.Collapse id="responsive-navbar-nav">  
               <ul>
                 <li>
                   <Link to="/roles">Roles and Responsibilities</Link>
@@ -61,9 +66,11 @@ function App() {
                   <Link to="/monitor">Monitor</Link>
                 </li>
               </ul>
-            </nav>
-          </div>
-        </header>
+            
+          </Navbar.Collapse>
+          </Container>
+        </Navbar>
+
         <div className="content-wrapper">
 
 
@@ -80,16 +87,16 @@ function App() {
               <Categorize />
             </Route>
             <Route path="/select">
-              <Select/>
+              <Select />
             </Route>
             <Route path="/implement">
-              <Implement/>
+              <Implement />
             </Route>
             <Route path="/assess">
               <Assess />
             </Route>
             <Route path="/authorize">
-              <Authorize/>
+              <Authorize />
             </Route>
             <Route path="/monitor">
               <Monitor />
@@ -99,8 +106,9 @@ function App() {
 
 
         </div>
-      </div>
-    </Router>
+
+      </Router>
+    </div>
   )
 }
 
@@ -112,46 +120,46 @@ function PTasks() {
 
 }
 
-function Roles(){
-  return(
-    <RandRFlashCardContainer cards={randrCardData}/>
+function Roles() {
+  return (
+    <RandRFlashCardContainer cards={randrCardData} />
   );
 }
 
-function Categorize(){
-  return(
-    <CategorizeFlashCardContainer cards={categorizeCardData}/>
+function Categorize() {
+  return (
+    <CategorizeFlashCardContainer cards={categorizeCardData} />
   );
 }
 
 
-function Select(){
-  return(
-    <SelectFlashCardContainer cards={selectCardData}/>
+function Select() {
+  return (
+    <SelectFlashCardContainer cards={selectCardData} />
   )
 }
 
-function Implement(){
-  return(
-    <ImplementFlashCardContainer cards={implementCardData}/>
+function Implement() {
+  return (
+    <ImplementFlashCardContainer cards={implementCardData} />
   )
 }
 
-function Assess(){
-  return(
-    <AssessFlashCardContainer cards={assessCardData}/>
+function Assess() {
+  return (
+    <AssessFlashCardContainer cards={assessCardData} />
   )
 }
 
-function Authorize(){
-  return(
-    <AuthorizeFlashCardContainer cards={authorizeCardData}/>
+function Authorize() {
+  return (
+    <AuthorizeFlashCardContainer cards={authorizeCardData} />
   )
 }
 
-function Monitor(){
-  return(
-    <MonitorFlashCardContainer cards={monitorCardData}/>
+function Monitor() {
+  return (
+    <MonitorFlashCardContainer cards={monitorCardData} />
   )
 }
 export default App;
