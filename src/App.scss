@@ -25,12 +25,12 @@
 //   font-size: calc(10px + 2vmin);
 //   color: white;
 //}
-.navContainer{
-  display: flex;
-}
-.App-link {
-  color: #61dafb;
-}
+// .navContainer{
+//   display: flex;
+// }
+// .App-link {
+//   color: #61dafb;
+// }
 
 @keyframes App-logo-spin {
   from {
@@ -41,33 +41,33 @@
   }
 }
 
-nav{
-  display: inline-flex;
-  flex-direction: row;
-}
+// nav{
+//   display: inline-flex;
+//   flex-direction: row;
+// }
 
 
-ul {
-  display: inline-block;
-  text-decoration: none;
-  margin-bottom: 0px !important;
+// ul {
+//   display: inline-block;
+//   text-decoration: none;
+//   margin-bottom: 0px !important;
  
-  li{
-   display:inline-block;
-   font-size: 16px;
-   margin: 5px;
+//   li{
+//    display:inline-block;
+//    font-size: 16px;
+//    margin: 5px;
    
-   a, a:hover{
-     text-decoration: none !important;
-     font-weight: bold;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     color:white;
-    //  border: 2px solid white;
-    //  border-radius: 5px;
-     padding: 8px;
+//    a, a:hover{
+//      text-decoration: none !important;
+//      font-weight: bold;
+//      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//      color:white;
+//     //  border: 2px solid white;
+//     //  border-radius: 5px;
+//      padding: 8px;
 
-   }
+//    }
    
- }
+//   }
 
-}
+// }

@@ -24,7 +24,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Container, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Row, Col } from 'react-bootstrap';
 
 
 
@@ -33,79 +33,57 @@ function App() {
     <div className="App">
       <Router>
 
-      
-        <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg">
-        <Navbar.Brand>CAP Flash Cards</Navbar.Brand>
+
+        <Navbar bg="dark" variant="dark" collapseOnSelect="true" expand="lg">
+          <Navbar.Brand>CAP Flash Cards</Navbar.Brand>
           <Container>
-            
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-               <Navbar.Collapse id="responsive-navbar-nav">  
-              <ul>
-                <li>
-                  <Link to="/roles">Roles and Responsibilities</Link>
-                </li>
-                <li>
-                  <Link to="/PTasks">P-Tasks</Link>
-                </li>
-                <li>
-                  <Link to="/categorize">Categorize</Link>
-                </li>
-                <li>
-                  <Link to="/select">Select</Link>
-                </li>
-                <li>
-                  <Link to="/implement">Implement</Link>
-                </li>
-                <li>
-                  <Link to="/assess">Assess</Link>
-                </li>
-                <li>
-                  <Link to="/authorize">Authorize</Link>
-                </li>
-                <li>
-                  <Link to="/monitor">Monitor</Link>
-                </li>
-              </ul>
-            
-          </Navbar.Collapse>
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav.Link href="/roles">Roles and Responsibilities </Nav.Link>
+              <Nav.Link href="/PTasks">P-Tasks</Nav.Link>
+              <Nav.Link href="/categorize">Categorize</Nav.Link>
+              <Nav.Link href="/select">Select</Nav.Link>
+              <Nav.Link href="/implement">Implement</Nav.Link>
+              <Nav.Link href="/assess">Assess</Nav.Link>
+              <Nav.Link href="/authorize">Authorize</Nav.Link>
+              <Nav.Link href="/monitor">Monitor</Nav.Link>
+            </Navbar.Collapse>
           </Container>
         </Navbar>
 
-        <div className="content-wrapper">
+        <Container className={"d-flex justify-content-center"}>
+          <Row >
+            <Col>
+            <Switch>
+              <Route path="/roles">
+                <Roles />
+              </Route>
+              <Route path="/PTasks">
+                <PTasks />
+              </Route>
+              <Route path="/categorize">
+                <Categorize />
+              </Route>
+              <Route path="/select">
+                <Select />
+              </Route>
+              <Route path="/implement">
+                <Implement />
+              </Route>
+              <Route path="/assess">
+                <Assess />
+              </Route>
+              <Route path="/authorize">
+                <Authorize />
+              </Route>
+              <Route path="/monitor">
+                <Monitor />
+              </Route>
+            </Switch>
+            </Col>
+          </Row>
 
-
-          {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-          <Switch>
-            <Route path="/roles">
-              <Roles />
-            </Route>
-            <Route path="/PTasks">
-              <PTasks />
-            </Route>
-            <Route path="/categorize">
-              <Categorize />
-            </Route>
-            <Route path="/select">
-              <Select />
-            </Route>
-            <Route path="/implement">
-              <Implement />
-            </Route>
-            <Route path="/assess">
-              <Assess />
-            </Route>
-            <Route path="/authorize">
-              <Authorize />
-            </Route>
-            <Route path="/monitor">
-              <Monitor />
-            </Route>
-          </Switch>
-
-
-
-        </div>
+        </Container>
 
       </Router>
     </div>

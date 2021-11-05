@@ -3,7 +3,7 @@ import _ from 'lodash';
 import PTaskFlashCard from './FlashCard';
 import './FlashCard.scss';
 
-
+import {Container} from 'react-bootstrap';
 
 
 
@@ -71,12 +71,12 @@ class PTasksFlashCardContainer extends React.Component {
     }
     render() {
       return (
-        <div>
+        <Container>
           {this.generateCards()}
           <div className='card-container__dots-wrapper'>
             {this.generateDots()}
           </div>
-        </div>
+        </Container>
      );
     }
   }
