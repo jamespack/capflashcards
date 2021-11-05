@@ -6,6 +6,7 @@ import categorizeCardData from './categorizeCardData';
 import selectCardData from './selectFlashCardData';
 import assessCardData from './assessCardData';
 import authorizeCardData from './authorizeCardData';
+import acronymCardData from './acronymCardData';
 import implementCardData from './implementCardData';
 import monitorCardData from './monitorCardData';
 import MonitorFlashCardContainer from './monitorFlashCardContainer';
@@ -16,7 +17,7 @@ import AssessFlashCardContainer from './assessFlashCardContainer';
 import RandRFlashCardContainer from './RandRFlashCardContainer';
 import CategorizeFlashCardContainer from './CategorizeFlashCardContainer';
 import SelectFlashCardContainer from './SelectFlashCardContainer';
-
+import AcronymFlashCardContainer from './acronymFlashCardContainer';
 import 'font-awesome/scss/font-awesome.scss';
 import {
   BrowserRouter as Router,
@@ -37,7 +38,7 @@ function App() {
         <Navbar bg="dark" variant="dark" collapseOnSelect="true" expand="lg">
 
           <Container>
-            <Navbar.Brand>CAP Flash Cards</Navbar.Brand>
+            <Navbar.Brand href="/">CAP Flash Cards</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <NavDropdown title="RMF Tasks" id="basic-nav-dropdown">
@@ -50,12 +51,13 @@ function App() {
                 <NavDropdown.Item className={'navLink'} href="/authorize">Authorize</NavDropdown.Item>
                 <NavDropdown.Item className={'navLink'} href="/monitor">Monitor</NavDropdown.Item>
               </NavDropdown>
+              <NavLink href="/acronyms" className={'navLink'}>Acronyms</NavLink>
             </Navbar.Collapse>
           </Container>
         </Navbar>
 
         <Container className={"d-flex justify-content-center fullHeightContainer"}>
-          <Row >
+          <Row className={"d-flex flex-column justify-content-center"}>
             <Col>
               <Switch>
                 <Route path="/roles">
@@ -82,6 +84,10 @@ function App() {
                 <Route path="/monitor">
                   <Monitor />
                 </Route>
+                <Route path="/acronyms">
+                  <Acronyms />
+                </Route>
+               <Route path={["/", "/roles"]} component={Roles}/>
               </Switch>
             </Col>
           </Row>
@@ -92,6 +98,7 @@ function App() {
     </div>
   )
 }
+
 
 
 function PTasks() {
@@ -143,4 +150,11 @@ function Monitor() {
     <MonitorFlashCardContainer cards={monitorCardData} />
   )
 }
+
+function Acronyms(){
+  return(
+    <AcronymFlashCardContainer cards={acronymCardData}/>
+  )
+}
+
 export default App;
