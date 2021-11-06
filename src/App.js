@@ -26,6 +26,8 @@ import {
   Link
 } from "react-router-dom";
 import { Container, Nav, Navbar, Row, Col, NavLink, NavDropdown } from 'react-bootstrap';
+import Fips199FlashCardContainer from './fips199FlashCardContainer';
+import fips199CardData from './fips199CardData';
 
 
 
@@ -41,7 +43,7 @@ function App() {
             <Navbar.Brand href="/">CAP Flash Cards</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <NavDropdown title="RMF Tasks" id="basic-nav-dropdown">
+              <NavDropdown title="RMF Tasks" className={"basic-nav-dropdown"}>
                 <NavDropdown.Item className={'navLink'} href="/roles">Roles and Responsibilities </NavDropdown.Item>
                 <NavDropdown.Item className={'navLink'} href="/PTasks">Prepare Tasks</NavDropdown.Item>
                 <NavDropdown.Item className={'navLink'} href="/categorize">Categorize</NavDropdown.Item>
@@ -50,6 +52,9 @@ function App() {
                 <NavDropdown.Item className={'navLink'} href="/assess">Assess</NavDropdown.Item>
                 <NavDropdown.Item className={'navLink'} href="/authorize">Authorize</NavDropdown.Item>
                 <NavDropdown.Item className={'navLink'} href="/monitor">Monitor</NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown title="NIST Publications" className={"basic-nav-dropdown"}>
+                <NavDropdown.Item className={'navLink'} href="/fips199">FIPS-199</NavDropdown.Item>
               </NavDropdown>
               <NavLink href="/acronyms" className={'navLink'}>Acronyms</NavLink>
             </Navbar.Collapse>
@@ -86,6 +91,9 @@ function App() {
                 </Route>
                 <Route path="/acronyms">
                   <Acronyms />
+                </Route>
+                <Route path="/fips199">
+                  <Fips199 />
                 </Route>
                <Route path={["/", "/roles"]} component={Roles}/>
               </Switch>
@@ -154,6 +162,12 @@ function Monitor() {
 function Acronyms(){
   return(
     <AcronymFlashCardContainer cards={acronymCardData}/>
+  )
+}
+
+function Fips199(){
+  return(
+    <Fips199FlashCardContainer cards={fips199CardData}/>
   )
 }
 
