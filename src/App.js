@@ -28,6 +28,8 @@ import {
 import { Container, Nav, Navbar, Row, Col, NavLink, NavDropdown } from 'react-bootstrap';
 import Fips199FlashCardContainer from './fips199FlashCardContainer';
 import fips199CardData from './fips199CardData';
+import Fips200FlashCardContainer from './fips200FlashCardContainer';
+import fips200CardData from './fips200CardData';
 
 
 
@@ -45,7 +47,7 @@ function App() {
             <Navbar.Collapse id="responsive-navbar-nav">
               <NavDropdown title="RMF Tasks" className={"basic-nav-dropdown"}>
                 <NavDropdown.Item className={'navLink'} href="/roles">Roles and Responsibilities </NavDropdown.Item>
-                <NavDropdown.Item className={'navLink'} href="/PTasks">Prepare Tasks</NavDropdown.Item>
+                <NavDropdown.Item className={'navLink'} href="/prepare">Prepare Tasks</NavDropdown.Item>
                 <NavDropdown.Item className={'navLink'} href="/categorize">Categorize</NavDropdown.Item>
                 <NavDropdown.Item className={'navLink'} href="/select">Select</NavDropdown.Item>
                 <NavDropdown.Item className={'navLink'} href="/implement">Implement</NavDropdown.Item>
@@ -55,6 +57,7 @@ function App() {
               </NavDropdown>
               <NavDropdown title="NIST Publications" className={"basic-nav-dropdown"}>
                 <NavDropdown.Item className={'navLink'} href="/fips199">FIPS-199</NavDropdown.Item>
+                <NavDropdown.Item className={'navLink'} href="/fips200">FIPS-200</NavDropdown.Item>
               </NavDropdown>
               <NavLink href="/acronyms" className={'navLink'}>Acronyms</NavLink>
             </Navbar.Collapse>
@@ -68,8 +71,8 @@ function App() {
                 <Route path="/roles">
                   <Roles />
                 </Route>
-                <Route path="/PTasks">
-                  <PTasks />
+                <Route path="/prepare">
+                  <Prepare />
                 </Route>
                 <Route path="/categorize">
                   <Categorize />
@@ -95,6 +98,9 @@ function App() {
                 <Route path="/fips199">
                   <Fips199 />
                 </Route>
+                <Route path="/fips200">
+                  <Fips200 />
+                </Route>
                <Route path={["/", "/roles"]} component={Roles}/>
               </Switch>
             </Col>
@@ -109,7 +115,7 @@ function App() {
 
 
 
-function PTasks() {
+function Prepare() {
   return (
     <PTasksFlashCardContainer cards={cardData} />
   );
@@ -168,6 +174,12 @@ function Acronyms(){
 function Fips199(){
   return(
     <Fips199FlashCardContainer cards={fips199CardData}/>
+  )
+}
+
+function Fips200(){
+  return(
+    <Fips200FlashCardContainer cards={fips200CardData}/>
   )
 }
 
