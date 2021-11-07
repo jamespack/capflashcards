@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import cardData from './cardData';
 import randrCardData from './randrCardData';
@@ -22,10 +21,9 @@ import 'font-awesome/scss/font-awesome.scss';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import { Container, Nav, Navbar, Row, Col, NavLink, NavDropdown } from 'react-bootstrap';
+import { Container, Navbar, Row, Col, NavLink, NavDropdown } from 'react-bootstrap';
 import Fips199FlashCardContainer from './fips199FlashCardContainer';
 import fips199CardData from './fips199CardData';
 import Fips200FlashCardContainer from './fips200FlashCardContainer';

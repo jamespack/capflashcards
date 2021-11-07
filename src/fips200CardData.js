@@ -21,7 +21,7 @@ const fips200CardData = [
     },
     {
         "Front": "What is Awareness and Training (AT)?",
-        "Back": "Ensuring that personnel are aware of the security risks associated with their use of an information system and that they are properly training to carry out their assigned information security duties."
+        "Back": "Ensuring that personnel are aware of the security risks associated with their use of an information system and that they are properly trained to carry out their assigned information security duties."
     },
     {
         "Front": "What is Audit and Accountability (AU)?",
@@ -69,7 +69,7 @@ const fips200CardData = [
     },
     {
         "Front": "What is System and Services Acquisition (SA)?",
-        "Back": "Allocation of sufficient resources to adequately protect information systems. Use SDLC process that incorporate information security considerations. Develop and employ software usage and installation restrictions and ensure third party providers use adequate security measures."
+        "Back": "Allocation of sufficient resources to adequately protect information systems. Use SDLC processes that incorporate information security considerations. Develop and employ software usage and installation restrictions and ensure third party providers use adequate security measures."
     },
     {
         "Front": "What is System and Communication Protection (SC)?",
